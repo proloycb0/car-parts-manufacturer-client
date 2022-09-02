@@ -6,6 +6,8 @@ import Login from './pages/Login/Login';
 import SignUp from './pages/Login/SignUp';
 import Footer from './pages/Shared/Footer';
 import Header from './pages/Shared/Header';
+import Purchase from "./pages/Home/Purchase";
+import RequireAuth from "./pages/Login/RequireAuth";
 
 
 function App() {
@@ -15,6 +17,11 @@ function App() {
       <div className="max-w-7xl mx-auto">
       <Routes>
           <Route path='/' element={<Home/>}/>
+          <Route path='/purchase/:id' element={
+            <RequireAuth>
+              <Purchase/>
+            </RequireAuth>
+          }/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/signup' element={<SignUp/>}/>
       </Routes>
