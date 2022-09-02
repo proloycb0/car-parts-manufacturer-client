@@ -10,13 +10,15 @@ import Header from './pages/Shared/Header';
 
 function App() {
   return (
-    <div className="">
+    <div>
       <Header/>
+      <div className="max-w-7xl mx-auto">
       <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/signup' element={<SignUp/>}/>
       </Routes>
+      </div>
       <Footer/>
     </div>
   );
