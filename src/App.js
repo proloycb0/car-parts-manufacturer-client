@@ -8,25 +8,27 @@ import Footer from './pages/Shared/Footer';
 import Header from './pages/Shared/Header';
 import Purchase from "./pages/Home/Purchase";
 import RequireAuth from "./pages/Login/RequireAuth";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <div>
-      <Header/>
       <div className="max-w-7xl mx-auto">
-      <Routes>
-          <Route path='/' element={<Home/>}/>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
           <Route path='/purchase/:id' element={
             <RequireAuth>
-              <Purchase/>
+              <Purchase />
             </RequireAuth>
-          }/>
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/signup' element={<SignUp/>}/>
-      </Routes>
+          } />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<SignUp />} />
+        </Routes>
       </div>
-      <Footer/>
+      <Footer />
+      <ToastContainer />
     </div>
   );
 }

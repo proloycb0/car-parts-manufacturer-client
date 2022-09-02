@@ -7,7 +7,7 @@ const Banner = () => {
         return (
             <div
                 className={className}
-                style={{ ...style, display: "block" }}
+                style={{ ...style, display: "block", background: "#7bdcb5", marginLeft: "10px" }}
                 onClick={onClick}
             />
         );
@@ -17,7 +17,7 @@ const Banner = () => {
         return (
             <div
                 className={className}
-                style={{ ...style, display: "block", marginRight: "25px" }}
+                style={{ ...style, display: "block", background: "#7bdcb5", marginRight: "25px" }}
                 onClick={onClick}
             />
         );
@@ -37,20 +37,20 @@ const Banner = () => {
             <div class="hero min-h-screen bg-[url('https://i.ibb.co/RQ3BhNx/slider-1.webp')]" >
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="py-52 lg:ml-16 ml-8 text-white">
-                    <div class="lg:max-w-md md:max-w-sm">
-                        <h3 class="lg:mb-5 mb-3 lg:text-3xl text-lg uppercase font-bold">New Technology & Build</h3>
-                        <h1 class="lg:mb-5 mb-3 lg:text-6xl text-2xl uppercase font-bold">Wheels & Tires Collections</h1>
-                        <button class="btn btn-neutral">Shop Now</button>
+                    <div class="max-w-lg">
+                        <h3 class="lg:mb-5 mb-3 md:text-3xl text-lg uppercase font-bold">New Technology & Build</h3>
+                        <h1 class="lg:mb-5 mb-3 md:text-6xl text-2xl uppercase font-bold">Wheels & Tires Collections</h1>
+                        <button class="btn btn-primary">Shop Now</button>
                     </div>
                 </div>
             </div>
             <div class="hero min-h-screen bg-[url('https://i.ibb.co/PcdFJVJ/slider-2.webp')]" >
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="py-52 lg:ml-16 ml-8 text-white">
-                    <div class="lg:max-w-md md:max-w-sm">
-                        <h3 class="lg:mb-5 mb-3 lg:text-3xl text-lg uppercase font-bold">New Technology & Build</h3>
-                        <h1 class="lg:mb-5 mb-3 lg:text-6xl text-2xl uppercase font-bold">Wheels & Tires Collections</h1>
-                        <button class="btn btn-neutral">Shop Now</button>
+                    <div class="max-w-lg">
+                        <h3 class="lg:mb-5 mb-3 md:text-3xl text-lg uppercase font-bold">New Technology & Build</h3>
+                        <h1 class="lg:mb-5 mb-3 md:text-6xl text-2xl uppercase font-bold">Wheels & Tires Collections</h1>
+                        <button class="btn btn-primary text-white">Shop Now</button>
                     </div>
                 </div>
             </div>

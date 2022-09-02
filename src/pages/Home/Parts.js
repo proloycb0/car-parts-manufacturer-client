@@ -17,7 +17,7 @@ const Parts = () => {
         return (
             <div
                 className={className}
-                style={{ ...style, display: "block", background: "#fcb900", }}
+                style={{ ...style, display: "block", background: "#7bdcb5", }}
                 onClick={onClick}
             />
         );
@@ -27,7 +27,7 @@ const Parts = () => {
         return (
             <div
                 className={className}
-                style={{ ...style, display: "block", background: "#fcb900", marginRight: "25px" }}
+                style={{ ...style, display: "block", background: "#7bdcb5", marginRight: "25px" }}
                 onClick={onClick}
             />
         );
