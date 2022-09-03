@@ -49,7 +49,7 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map((order, index) => <tr key={order._id}>
+                            orders?.map((order, index) => <tr key={order._id}>
                                 <th>{index + 1}</th>
                                 <td>{order.product}</td>
                                 <td>{order.orderQuantity}</td>
