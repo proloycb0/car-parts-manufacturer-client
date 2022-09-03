@@ -12,7 +12,7 @@ const BusinessSummary = () => {
                     <div>
                     <FaUsers className="inline-block w-8 h-8 stroke-current"/>
                     </div>
-                    <div className="stat-value text-accent">100+</div>
+                    <div className="stat-value text-primary">100+</div>
                     <div>We Served Customers</div>
                 </div>
 
@@ -20,7 +20,7 @@ const BusinessSummary = () => {
                     <div>
                     <RiExchangeDollarFill className="inline-block w-8 h-8 stroke-current"/>
                     </div>
-                    <div className="stat-value text-accent">120M+</div>
+                    <div className="stat-value text-primary">120M+</div>
                     <div>Annual Revenue</div>
                 </div>
 
@@ -28,7 +28,7 @@ const BusinessSummary = () => {
                     <div>
                         <MdReviews className="inline-block w-8 h-8 stroke-current"/>
                     </div>
-                    <div className="stat-value text-accent">33K+</div>
+                    <div className="stat-value text-primary">33K+</div>
                     <div>Reviews</div>
                 </div>
 
@@ -36,7 +36,7 @@ const BusinessSummary = () => {
                     <div>
                     <FaTools className="inline-block w-8 h-8 stroke-current"/>
                     </div>
-                    <div className="stat-value text-accent">50+</div>
+                    <div className="stat-value text-primary">50+</div>
                     <div>Tools</div>
                 </div>
             </div>
