@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 import Loading from '../Shared/Loading';
 
 
@@ -18,7 +19,7 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-    // const [token] = useToken(user || gUser);
+    const [token] = useToken(user || gUser);
     let signInError;
     const navigate = useNavigate();
     const location = useLocation();
@@ -26,10 +27,10 @@ const Login = () => {
     const from = location.state?.from?.pathname || "/";
 
     useEffect(() => {
-        if (user || gUser) {
+        if (token) {
             navigate(from, { replace: true });
         }
-    }, [user, gUser, from, navigate]);
+    }, [token, from, navigate]);
     
     if (loading || gLoading || sending) {
         return <Loading />
@@ -40,6 +41,7 @@ const Login = () => {
     const onSubmit = async (data) => {
         console.log(data);
         await signInWithEmailAndPassword(data.email, data.password)
+        toast.success('Login successful')
     }
 
     const handleReset = async () => {
@@ -53,7 +55,7 @@ const Login = () => {
         }
     }
     return (
-        <div className='flex h-screen justify-center items-center'>
+        <div className='flex justify-center items-center mt-5 mb-5'>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-2xl text-primary font-bold">Login</h2>
