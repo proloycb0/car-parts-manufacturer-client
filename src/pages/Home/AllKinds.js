@@ -4,7 +4,6 @@ const AllKinds = () => {
     return (
         <div>
             <div class="hero md:py-40 py-20 bg-[url('https://htmldemo.net/lukas/lukas/assets/img/bg/bg-1.jpg')]" >
-                <div class=""></div>
                 <div class="">
                     <div class="max-w-lg text-center">
                         <h3 class="lg:mb-5 mb-3 md:text-4xl text-lg uppercase font-bold">ALL KINDS OF PARTS THAT YOU NEED CAN FIND HERE</h3>
