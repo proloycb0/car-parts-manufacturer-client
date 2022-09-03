@@ -36,9 +36,11 @@ const Parts = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 1000,
         slidesToShow: 3,
         slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 3000,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
         initialSlide: 0,
@@ -70,7 +72,7 @@ const Parts = () => {
         ]
     };
     return (
-        <div className='mt-3 mb-8'>
+        <div className="max-w-7xl mx-auto mt-3 mb-8">
             <h4 className='text-3xl text-center font-bold mb-8 mt-16'>Available Products</h4>
             <div className='grid grid-cols-1 gap-5' >
                 <Slider {...settings}>

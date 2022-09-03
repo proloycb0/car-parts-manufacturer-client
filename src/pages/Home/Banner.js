@@ -7,7 +7,7 @@ const Banner = () => {
         return (
             <div
                 className={className}
-                style={{ ...style, display: "block", background: "#7bdcb5", marginLeft: "10px" }}
+                style={{ ...style, display: "none"}}
                 onClick={onClick}
             />
         );
@@ -17,7 +17,7 @@ const Banner = () => {
         return (
             <div
                 className={className}
-                style={{ ...style, display: "block", background: "#7bdcb5", marginRight: "25px" }}
+                style={{ ...style, display: "none",}}
                 onClick={onClick}
             />
         );
@@ -25,9 +25,11 @@ const Banner = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 2000,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000, 
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />
     };
