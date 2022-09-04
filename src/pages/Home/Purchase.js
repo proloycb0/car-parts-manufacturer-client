@@ -8,7 +8,6 @@ import PurchaseConfirmationModal from './PurchaseConfirmationModal';
 
 const Purchase = () => {
     const { id } = useParams();
-    const [user] = useAuthState(auth);
     const [product, setProduct] = useState({});
     const quantityRef = useRef('');
     const [disable, setDisable] = useState(false);
@@ -54,7 +53,7 @@ const Purchase = () => {
         <div className='grid justify-center mt-8 mb-5'>
             <h2 className='text-3xl text-primary text-center mb-8'>Purchase please</h2>
             <div className="card bg-base-100 shadow-xl">
-                <figure><img src={image} alt="" className=' h-72' /></figure>
+                <figure><img src={image} alt="" className='w-64 h-64' /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
                     <p>{description}</p>
@@ -78,6 +77,7 @@ const Purchase = () => {
                     minOrderQuantity={minOrderQuantity}
                 />
             }
+             <button onClick={() => navigate('/dashboard/orders')} className='btn btn-primary text-white w-2/4 mx-auto mt-3'>My Orders</button>
         </div>
     );
 };
