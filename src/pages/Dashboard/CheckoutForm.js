@@ -1,5 +1,6 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 const CheckoutForm = ({ order }) => {
     const stripe = useStripe();
@@ -91,7 +92,8 @@ const CheckoutForm = ({ order }) => {
             })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                console.log(data);
+                toast.success('Your payment successful')
             })
         }
     }

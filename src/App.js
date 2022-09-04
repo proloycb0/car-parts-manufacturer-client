@@ -32,11 +32,12 @@ function App() {
               <Purchase />
             </RequireAuth>
           } />
+         
           <Route path='/dashboard' element={<RequireAuth><Dashboard/></RequireAuth>}>
             <Route index element={<MyProfile/>}/>
             <Route path='review' element={<AddReview/>}/>
             <Route path='orders' element={<MyOrders/>}/>
-            <Route path='payment/:id' element={<Payment/>}/>
+             <Route path='orders/payment/:id' element={<Payment/>}/>
             <Route path='manageOrder' element={<ManageOrders/>}/>
             <Route path='product' element={<AddProduct/>}/>
             <Route path='makeAdmin' element={<MakeAdmin/>}/>
