@@ -19,6 +19,7 @@ import AddProduct from "./pages/Dashboard/AddProduct";
 import MakeAdmin from "./pages/Dashboard/MakeAdmin";
 import ManageProduct from "./pages/Dashboard/ManageProduct";
 import Payment from "./pages/Dashboard/Payment";
+import NotFound from "./pages/Shared/NotFound";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </div>
       <Footer />

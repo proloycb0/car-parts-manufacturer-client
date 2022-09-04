@@ -5,7 +5,7 @@ const Part = ({product}) => {
     const {_id, image, name, quantity, orderQuantity, price, description} = product;
     const navigate = useNavigate();
     return (
-        <div className="card bg-base-100 shadow-xl md:mr-4">
+        <div className="card bg-base-100 shadow-xl md:mr-4 h-screen">
             <figure><img src={image} alt="" className='h-72' /></figure>
             <div className="card-body">
                 <h2 className="card-title text-primary">{name}</h2>
