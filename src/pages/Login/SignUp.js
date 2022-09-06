@@ -35,7 +35,7 @@ const SignUp = () => {
     const onSubmit = async (data) => {
         console.log(data);
         await createUserWithEmailAndPassword(data.email, data.password);
-        await updateProfile({displayName: data.name, email: data.email, photoURL: ''});
+        await updateProfile({displayName: data.name, email: data.email, photoURL: 'https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg'});
         await sendEmailVerification();
         toast.success('SignUp successful');
     }

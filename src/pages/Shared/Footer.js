@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const today = new Date();
@@ -12,6 +13,7 @@ const Footer = () => {
                     CarnoCar Ltd. <br />Providing reliable tech since 1992
                 </p>
                 <p>Copyright &copy; {year} - All right reserved by CarnoCar Parts Ltd.</p>
+                <p>Developed by - <a href="https://proloycb.netlify.app/" target="_blank" as={Link} className='decoration-none'>Proloy Chacroborty</a></p>
             </div>
             <div>
                 <div class="grid grid-flow-col gap-4">
