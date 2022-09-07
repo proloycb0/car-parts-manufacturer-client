@@ -24,6 +24,7 @@ import Blogs from "./pages/Blogs/Blogs";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import RequireAdmin from "./pages/Login/RequireAdmin";
+import AllProducts from "./pages/Home/AllProducts";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             </RequireAuth>
           } />
           <Route path='/blogs' element={<Blogs />} />
+          <Route path='/allProduct' element={<AllProducts />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
 

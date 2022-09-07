@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery } from 'react-query';
+import { useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
 import Loading from '../Shared/Loading';
 import Part from './Part';
@@ -7,7 +8,9 @@ import Part from './Part';
 const Parts = () => {
     const { data: products, isLoading } = useQuery("parts", () => fetch('http://localhost:5000/parts')
         .then(res => res.json())
-    )
+    );
+
+    const navigate = useNavigate();
 
     if (isLoading) {
         return <Loading />
@@ -84,6 +87,7 @@ const Parts = () => {
                     }
                 </Slider>
             </div>
+            <p className='text-end mt-8'><button onClick={() => navigate('/allProduct')} className="btn btn-primary text-white">Show All</button></p>
         </div>
     );
 };
