@@ -24,12 +24,28 @@ const UserRow = ({ index, user, refetch }) => {
                 }
             })
     }
+
+    const handleDelete = () => {
+        fetch(`https://young-citadel-45878.herokuapp.com/user/${email}`, {
+            method: 'DELETE',
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.deletedCount) {
+                toast.success(`The user is deleted`);
+                refetch();
+            }
+        })
+    }
     return (
         <tr>
             <th>{index}</th>
             <td>{email}</td>
             <td>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-primary text-white btn-xs">Make Admin</button>}</td>
-            <td><button className="btn btn-error btn-xs">Remove User</button></td>
+            <td><button onClick={() => handleDelete(email)} className="btn btn-error btn-xs">Remove User</button></td>
         </tr>
     );
 };
