@@ -12,7 +12,7 @@ const NewsLetter = () => {
                     <div className='text-center'>
                         <h2 className='font-bold text-black text-5xl mb-3'>FLASH DEALS</h2>
                         <h3 className='font-bold text-black text-3xl mb-8'>HURRY UP AND GET 25% DISCOUNT</h3>
-                        <button class="btn btn-primary mb-8">Shop Now</button>
+                        <button class="btn btn-primary text-white mb-8">Shop Now</button>
                         <Countdown />
                     </div>
                 </div>

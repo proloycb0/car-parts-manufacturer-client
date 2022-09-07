@@ -42,7 +42,7 @@ const Banner = () => {
                     <div class="max-w-lg">
                         <h3 class="lg:mb-5 mb-3 md:text-3xl text-lg uppercase font-bold">New Technology & Build</h3>
                         <h1 class="lg:mb-5 mb-3 md:text-6xl text-2xl uppercase font-bold">Wheels & Tires Collections</h1>
-                        <button class="btn btn-primary">Shop Now</button>
+                        <button class="btn btn-primary text-white">Shop Now</button>
                     </div>
                 </div>
             </div>

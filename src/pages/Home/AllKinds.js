@@ -7,7 +7,7 @@ const AllKinds = () => {
                 <div class="">
                     <div class="max-w-lg text-center">
                         <h3 class="lg:mb-5 mb-3 md:text-4xl text-lg uppercase font-bold">ALL KINDS OF PARTS THAT YOU NEED CAN FIND HERE</h3>
-                        <button class="btn btn-primary">Shop Now</button>
+                        <button class="btn btn-primary text-white">Shop Now</button>
                     </div>
                 </div>
             </div>
