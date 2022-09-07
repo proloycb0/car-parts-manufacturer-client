@@ -39,7 +39,6 @@ const Login = () => {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message}</small></p>
     }
     const onSubmit = async (data) => {
-        console.log(data);
         await signInWithEmailAndPassword(data.email, data.password)
         toast.success('Login successful')
     }

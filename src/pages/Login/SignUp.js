@@ -20,7 +20,6 @@ const SignUp = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [token] = useToken(user || gUser);
     const navigate = useNavigate();
-    console.log(gUser)
     let signUpError;
 
     if(loading || gLoading || updating || sending){
@@ -33,7 +32,6 @@ const SignUp = () => {
         signUpError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
     }
     const onSubmit = async (data) => {
-        console.log(data);
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({displayName: data.name, email: data.email, photoURL: 'https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg'});
         await sendEmailVerification();

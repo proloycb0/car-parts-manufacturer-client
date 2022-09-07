@@ -13,7 +13,6 @@ const OrderCancelConfirm = ({cancelOrder, setCancelOrder, refetch}) => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             if(data.deletedCount) {
                 toast.success(`${product} is deleted`);
                 setCancelOrder(null);

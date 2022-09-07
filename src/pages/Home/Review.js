@@ -9,8 +9,8 @@ const Review = ({ review }) => {
                 <Rate rate={rating} />
                 <p>{description}</p>
                 <div className="flex items-center">
-                    <div class="avatar">
-                        <div class="w-12 rounded-full mr-3">
+                    <div className="avatar">
+                        <div className="w-12 rounded-full mr-3">
                             <img src={image} alt="" />
                         </div>
                     </div>

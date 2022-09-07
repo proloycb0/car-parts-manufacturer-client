@@ -24,7 +24,7 @@ const AddProduct = () => {
                         name: data.name,
                         image: img,
                         description: data.description,
-                        OrderQuantity: data.minimumOrderQuantity,
+                        orderQuantity: data.minimumOrderQuantity,
                         quantity: data.availableQuantity,
                         price: data.price
                     }
@@ -49,7 +49,6 @@ const AddProduct = () => {
                             }
                         })
                 }
-                console.log(result)
             })
     }
     

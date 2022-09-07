@@ -38,23 +38,23 @@ const Banner = () => {
 
     return (
         <Slider {...settings}>
-            <div class="hero min-h-screen bg-[url('https://i.ibb.co/RQ3BhNx/slider-1.webp')]" >
-                <div class="hero-overlay bg-opacity-60"></div>
-                <div class="py-52 lg:ml-16 ml-8 text-white">
-                    <div class="max-w-lg">
-                        <h3 class="lg:mb-5 mb-3 md:text-3xl text-lg uppercase font-bold">New Technology & Build</h3>
-                        <h1 class="lg:mb-5 mb-3 md:text-6xl text-2xl uppercase font-bold">Wheels & Tires Collections</h1>
-                        <button onClick={() => navigate('/allProduct')} class="btn btn-primary text-white">Shop Now</button>
+            <div className="hero min-h-screen bg-[url('https://i.ibb.co/RQ3BhNx/slider-1.webp')]" >
+                <div className="hero-overlay bg-opacity-60"></div>
+                <div className="py-52 lg:ml-16 ml-8 text-white">
+                    <div className="max-w-lg">
+                        <h3 className="lg:mb-5 mb-3 md:text-3xl text-lg uppercase font-bold">New Technology & Build</h3>
+                        <h1 className="lg:mb-5 mb-3 md:text-6xl text-2xl uppercase font-bold">Wheels & Tires Collections</h1>
+                        <button onClick={() => navigate('/allProduct')} className="btn btn-primary text-white">Shop Now</button>
                     </div>
                 </div>
             </div>
-            <div class="hero min-h-screen bg-[url('https://i.ibb.co/PcdFJVJ/slider-2.webp')]" >
-                <div class="hero-overlay bg-opacity-60"></div>
-                <div class="py-52 lg:ml-16 ml-8 text-white">
-                    <div class="max-w-lg">
-                        <h3 class="lg:mb-5 mb-3 md:text-3xl text-lg uppercase font-bold">New Technology & Build</h3>
-                        <h1 class="lg:mb-5 mb-3 md:text-6xl text-2xl uppercase font-bold">Wheels & Tires Collections</h1>
-                        <button onClick={() => navigate('/allProduct')} class="btn btn-primary text-white">Shop Now</button>
+            <div className="hero min-h-screen bg-[url('https://i.ibb.co/PcdFJVJ/slider-2.webp')]" >
+                <div className="hero-overlay bg-opacity-60"></div>
+                <div className="py-52 lg:ml-16 ml-8 text-white">
+                    <div className="max-w-lg">
+                        <h3 className="lg:mb-5 mb-3 md:text-3xl text-lg uppercase font-bold">New Technology & Build</h3>
+                        <h1 className="lg:mb-5 mb-3 md:text-6xl text-2xl uppercase font-bold">Wheels & Tires Collections</h1>
+                        <button onClick={() => navigate('/allProduct')} className="btn btn-primary text-white">Shop Now</button>
                     </div>
                 </div>
             </div>

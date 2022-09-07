@@ -35,7 +35,6 @@ const ManageOrders = () => {
             .then(data => {
                 refetch();
                 toast('Shipped successfull')
-                console.log(data)
             })
     }
     return (

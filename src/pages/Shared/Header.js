@@ -40,13 +40,13 @@ const Header = () => {
                 <label tabIndex="1" htmlFor="dashboard-sidebar" className="btn btn-ghost lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </label>
-                <div class="dropdown dropdown-end">
-                    <label tabindex="1" class="btn btn-ghost btn-circle avatar">
-                        <div class="w-10 rounded-full">
+                <div className="dropdown dropdown-end">
+                    <label tabIndex="1" className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
                             <img src={user ? user?.photoURL : 'https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg'} alt=''/>
                         </div>
                     </label>
-                    <ul tabindex="1" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex="1" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li>{user ? <>
                             <h5 className='text-primary'>Name: {user?.displayName}</h5>
                             <h5 className='text-primary'>Email: {user?.email}</h5>

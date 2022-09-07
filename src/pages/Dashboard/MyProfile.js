@@ -67,7 +67,6 @@ const MyProfile = () => {
         })
             .then(res => res.json())
             .then(async (data) => {
-                console.log(data);
                 toast.success('save information successfully');
                 refetch();
                 <Loading/>
@@ -82,8 +81,8 @@ const MyProfile = () => {
                 {
                     users?.map(user => <div key={user._id} className="card w-96 bg-base-100 shadow-xl">
                         <div className="card-body">
-                            <div class="avatar">
-                                <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                            <div className="avatar">
+                                <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                     <img src={user?.photo} alt="" />
                                 </div>
                             </div>

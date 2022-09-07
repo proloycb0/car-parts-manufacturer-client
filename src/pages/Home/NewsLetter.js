@@ -6,7 +6,7 @@ const NewsLetter = () => {
     const navigate = useNavigate();
     return (
         <div>
-            <div class="hero md:py-40 py-20 bg-[url('https://htmldemo.net/lukas/lukas/assets/img/bg/bg-1.jpg')]" >
+            <div className="hero md:py-40 py-20 bg-[url('https://htmldemo.net/lukas/lukas/assets/img/bg/bg-1.jpg')]" >
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
                     <div>
                         <img src="https://i.ibb.co/7YKzFgW/wheels.webp" alt="" />
@@ -14,13 +14,13 @@ const NewsLetter = () => {
                     <div className='text-center'>
                         <h2 className='font-bold text-black text-5xl mb-3'>FLASH DEALS</h2>
                         <h3 className='font-bold text-black text-3xl mb-8'>HURRY UP AND GET 25% DISCOUNT</h3>
-                        <button onClick={() => navigate('/allProduct')} class="btn btn-primary text-white mb-8">Shop Now</button>
+                        <button onClick={() => navigate('/allProduct')} className="btn btn-primary text-white mb-8">Shop Now</button>
                         <Countdown />
                     </div>
                 </div>
             </div>
             <div className='w-full lg:px-24 -mt-16 md:-mt-28'>
-                <div class="hero py-24 bg-[url('https://i.ibb.co/1TZMh5Y/newsletter-bg.webp')]" >
+                <div className="hero py-24 bg-[url('https://i.ibb.co/1TZMh5Y/newsletter-bg.webp')]" >
                     <div className="mx-auto text-center text-neutral-content">
                         <div className="lg:max-w-md md:max-w-sm text-white">
                             <h3 className='uppercase font-semibold mb-4'>SPECIAL <span className='text-primary'>OFFER</span> FOR SUBSCRIPTION</h3>
