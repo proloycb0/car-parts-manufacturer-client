@@ -23,6 +23,7 @@ import NotFound from "./pages/Shared/NotFound";
 import Blogs from "./pages/Blogs/Blogs";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import RequireAdmin from "./pages/Login/RequireAdmin";
 
 function App() {
   return (
@@ -45,10 +46,10 @@ function App() {
             <Route path='review' element={<AddReview />} />
             <Route path='orders' element={<MyOrders />} />
             <Route path='orders/payment/:id' element={<Payment />} />
-            <Route path='manageOrder' element={<ManageOrders />} />
-            <Route path='product' element={<AddProduct />} />
-            <Route path='makeAdmin' element={<MakeAdmin />} />
-            <Route path='manageProduct' element={<ManageProduct />} />
+            <Route path='manageOrder' element={<RequireAdmin><ManageOrders /></RequireAdmin>} />
+            <Route path='product' element={<RequireAdmin><AddProduct /></RequireAdmin>} />
+            <Route path='makeAdmin' element={<RequireAdmin><MakeAdmin /></RequireAdmin>} />
+            <Route path='manageProduct' element={<RequireAdmin><ManageProduct /></RequireAdmin>} />
           </Route>
 
           <Route path='/login' element={<Login />} />

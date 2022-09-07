@@ -1,15 +1,19 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
+import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Loading from '../Shared/Loading';
 
 const CheckoutForm = ({ order }) => {
+    const { id } = useParams();
     const stripe = useStripe();
     const elements = useElements();
     const [cardError, setCardError] = useState('');
     const [success, setSuccess] = useState('');
     const [transactionId, setTransactionId] = useState('');
     const [clientSecret, setClientSecret] = useState('');
-    
+
 
     const { _id, price, userEmail, userName} = order;
 
@@ -29,7 +33,6 @@ const CheckoutForm = ({ order }) => {
                 }
             })
     }, [price]);
-
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -90,14 +93,14 @@ const CheckoutForm = ({ order }) => {
                 },
                 body: JSON.stringify(payment)
             })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                toast.success('Your payment successful')
-            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    toast.success('Your payment successful');
+                })
         }
     }
-    
+
     return (
         <form onSubmit={handleSubmit}>
             <CardElement

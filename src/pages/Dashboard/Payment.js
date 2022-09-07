@@ -1,6 +1,6 @@
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import Loading from '../Shared/Loading';
@@ -10,6 +10,7 @@ const stripePromise = loadStripe('pk_test_51L0eRwKEErB9NVHS5sUdXuwmf4krkFKDHJ9qn
 
 const Payment = () => {
     const { id } = useParams();
+    const [part, setPart] = useState({});
     const url = `http://localhost:5000/orders/${id}`;
 
     const { data: order, isLoading } = useQuery('order', () => fetch(url, {
@@ -19,8 +20,42 @@ const Payment = () => {
         }
     }).then(res => res.json()));
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/parts/${id}`, {
+            method: 'GET',
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => setPart(data))
+    }, [id]);
+
     if (isLoading) {
         return <Loading />
+    }
+
+    if (order?.status === 'pending') {
+        const availableQuantity = parseInt(part.quantity);
+        const orderedQuantity = parseInt(order.orderQuantity);
+        console.log(availableQuantity, orderedQuantity)
+
+        const updatedQuantity = availableQuantity - orderedQuantity;
+
+        // update quantity 
+        const url = `http://localhost:5000/updateQuantity/${id}`;
+        fetch(url, {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json",
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            },
+            body: JSON.stringify({ updatedQuantity }),
+        })
+            .then(res => res.json())
+            .then(data => {
+                
+            });
     }
     return (
         <div className='ml-5 mb-5'>
