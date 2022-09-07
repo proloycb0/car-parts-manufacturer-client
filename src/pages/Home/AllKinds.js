@@ -14,7 +14,7 @@ const AllKinds = () => {
                 </div>
             </div>
             <div className='w-3/4 mx-auto -mt-16 md:-mt-32'>
-                <img src="https://i.ibb.co/QYSFHFx/bg-car.webp" alt="" />
+                <img src="https://i.ibb.co/QYSFHFx/bg-car.webp" alt="" data-aos="zoom-in-up" data-aos-duration="3000"/>
             </div>
         </div>
     );

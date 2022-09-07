@@ -4,7 +4,7 @@ import Rate from '../../hooks/Rate';
 const Review = ({ review }) => {
     const { rating, image, name, description } = review
     return (
-        <div className="card bg-base-100 shadow-xl md:mr-4">
+        <div className="card bg-base-100 shadow-xl md:mr-4" data-aos="zoom-in-up" data-aos-duration="3000">
             <div className="card-body">
                 <Rate rate={rating} />
                 <p>{description}</p>
