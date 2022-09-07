@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
 
 const Banner = () => {
+    const navigate = useNavigate();
     function SamplePrevArrow(props) {
         const { className, style, onClick } = props;
         return (
@@ -42,7 +44,7 @@ const Banner = () => {
                     <div class="max-w-lg">
                         <h3 class="lg:mb-5 mb-3 md:text-3xl text-lg uppercase font-bold">New Technology & Build</h3>
                         <h1 class="lg:mb-5 mb-3 md:text-6xl text-2xl uppercase font-bold">Wheels & Tires Collections</h1>
-                        <button class="btn btn-primary text-white">Shop Now</button>
+                        <button onClick={() => navigate('/allProduct')} class="btn btn-primary text-white">Shop Now</button>
                     </div>
                 </div>
             </div>
@@ -52,7 +54,7 @@ const Banner = () => {
                     <div class="max-w-lg">
                         <h3 class="lg:mb-5 mb-3 md:text-3xl text-lg uppercase font-bold">New Technology & Build</h3>
                         <h1 class="lg:mb-5 mb-3 md:text-6xl text-2xl uppercase font-bold">Wheels & Tires Collections</h1>
-                        <button class="btn btn-primary text-white">Shop Now</button>
+                        <button onClick={() => navigate('/allProduct')} class="btn btn-primary text-white">Shop Now</button>
                     </div>
                 </div>
             </div>

@@ -16,7 +16,7 @@ const Purchase = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/parts/${id}`)
+        fetch(`https://young-citadel-45878.herokuapp.com/parts/${id}`)
             .then(res => res.json())
             .then(data => {
                 setMinOrderQuantity(parseInt(data.orderQuantity));

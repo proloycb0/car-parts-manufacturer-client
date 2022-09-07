@@ -27,7 +27,7 @@ const PurchaseConfirmationModal = ({order, setOrder, minOrderQuantity}) => {
         }
 
         // booking order 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://young-citadel-45878.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

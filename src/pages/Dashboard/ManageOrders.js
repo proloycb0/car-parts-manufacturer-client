@@ -7,7 +7,7 @@ import OrderCancelConfirm from './OrderCancelConfirm';
 
 const ManageOrders = () => {
     const [cancelOrder, setCancelOrder] = useState(null);
-    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:5000/orders`, {
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`https://young-citadel-45878.herokuapp.com/orders`, {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -23,7 +23,7 @@ const ManageOrders = () => {
     const handleShipped = (_id) => {
 
         const payment = { status: "Shipped" }
-        fetch(`http://localhost:5000/order/${_id}`, {
+        fetch(`https://young-citadel-45878.herokuapp.com/order/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

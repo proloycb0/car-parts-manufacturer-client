@@ -1,13 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AllKinds = () => {
+    const navigate = useNavigate();
     return (
         <div>
             <div class="hero md:py-40 py-20 bg-[url('https://htmldemo.net/lukas/lukas/assets/img/bg/bg-1.jpg')]" >
                 <div class="">
                     <div class="max-w-lg text-center">
                         <h3 class="lg:mb-5 mb-3 md:text-4xl text-lg uppercase font-bold">ALL KINDS OF PARTS THAT YOU NEED CAN FIND HERE</h3>
-                        <button class="btn btn-primary text-white">Shop Now</button>
+                        <button onClick={() => navigate('/allProduct')} class="btn btn-primary text-white">Shop Now</button>
                     </div>
                 </div>
             </div>

@@ -1,11 +1,12 @@
 import React from 'react';
+import { RiSliceFill } from 'react-icons/ri';
 import { useQuery } from 'react-query';
 import Slider from 'react-slick';
 import Loading from '../Shared/Loading';
 import Review from './Review';
 
 const Reviews = () => {
-    const { data: reviews, isLoading } = useQuery('reviews', () => fetch('http://localhost:5000/review', {
+    const { data: reviews, isLoading } = useQuery('reviews', () => fetch('https://young-citadel-45878.herokuapp.com/review', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',
@@ -84,7 +85,7 @@ const Reviews = () => {
             <div className='grid grid-cols-1 gap-5' >
                 <Slider {...settings}>
                     {
-                        reviews?.map(review => <Review
+                        reviews?.slice(0, 6).map(review => <Review
                             key={review._id}
                             review={review}
                         />)

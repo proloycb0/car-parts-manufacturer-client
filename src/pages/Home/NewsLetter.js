@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Countdown from './Countdown';
 
 const NewsLetter = () => {
+    const navigate = useNavigate();
     return (
         <div>
             <div class="hero md:py-40 py-20 bg-[url('https://htmldemo.net/lukas/lukas/assets/img/bg/bg-1.jpg')]" >
@@ -12,7 +14,7 @@ const NewsLetter = () => {
                     <div className='text-center'>
                         <h2 className='font-bold text-black text-5xl mb-3'>FLASH DEALS</h2>
                         <h3 className='font-bold text-black text-3xl mb-8'>HURRY UP AND GET 25% DISCOUNT</h3>
-                        <button class="btn btn-primary text-white mb-8">Shop Now</button>
+                        <button onClick={() => navigate('/allProduct')} class="btn btn-primary text-white mb-8">Shop Now</button>
                         <Countdown />
                     </div>
                 </div>
