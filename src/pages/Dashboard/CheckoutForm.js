@@ -1,12 +1,8 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
-import { useQuery } from 'react-query';
-import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import Loading from '../Shared/Loading';
 
 const CheckoutForm = ({ order }) => {
-    const { id } = useParams();
     const stripe = useStripe();
     const elements = useElements();
     const [cardError, setCardError] = useState('');
@@ -82,7 +78,7 @@ const CheckoutForm = ({ order }) => {
             const payment = {
                 order: _id,
                 transactionId: paymentIntent.id,
-                status: "pending"
+                status: "Pending"
             }
             //
             fetch(`http://localhost:5000/orders/${_id}`, {

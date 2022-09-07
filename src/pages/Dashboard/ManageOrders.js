@@ -22,7 +22,7 @@ const ManageOrders = () => {
 
     const handleShipped = (_id) => {
 
-        const payment = { status: "shipped" }
+        const payment = { status: "Shipped" }
         fetch(`http://localhost:5000/order/${_id}`, {
             method: 'PUT',
             headers: {

@@ -23,7 +23,7 @@ const PurchaseConfirmationModal = ({order, setOrder, minOrderQuantity}) => {
             product: name,
             price: totalPrice,
             orderQuantity: minOrderQuantity,
-            status: "unpaid"
+            status: "Unpaid"
         }
 
         // booking order 

@@ -50,9 +50,9 @@ const Purchase = () => {
         setDisable(false);
     }
     return (
-        <div className='grid justify-center mt-8 mb-5'>
-            <h2 className='text-3xl text-primary text-center mb-8'>Purchase please</h2>
-            <div className="card bg-base-100 shadow-xl">
+        <div className='grid justify-center mt-4 mb-5'>
+            <h2 className='text-3xl text-primary text-center mb-3'>Purchase please</h2>
+            <div className="card bg-base-100 shadow-xl lg:w-96">
                 <figure><img src={image} alt="" className='w-64 h-64' /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
