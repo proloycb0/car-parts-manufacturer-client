@@ -64,7 +64,7 @@ const ManageOrders = () => {
                                 <td>{order.price}</td>
                                 <td>{order.status}</td>
                                 <td>
-                                    {order.status === "pending" ? <button onClick={() => handleShipped(order._id)} className='btn btn-xs btn-primary'>Shipped</button> : <button className='btn btn-xs disabled'>Shipped</button>}
+                                    {order.status === "Pending" ? <button onClick={() => handleShipped(order._id)} className='btn btn-xs btn-primary'>Shipped</button> : <button className='btn btn-xs' disabled>Shipped</button>}
                                     {!order.paid ? <label onClick={() => setCancelOrder(order)} htmlFor="cancel-confirm-modal" className='btn btn-xs btn-error'>Cancel</label> : <button className='btn btn-xs' disabled>Cancel</button>}
                                 </td>
                             </tr>)
