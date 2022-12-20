@@ -27,7 +27,7 @@ const PurchaseConfirmationModal = ({order, setOrder, minOrderQuantity}) => {
         }
 
         // booking order 
-        fetch('https://young-citadel-45878.herokuapp.com/orders', {
+        fetch('https://car-parts-manufacturer-server.onrender.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

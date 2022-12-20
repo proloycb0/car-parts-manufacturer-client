@@ -14,7 +14,7 @@ const CheckoutForm = ({ order }) => {
     const { _id, price, userEmail, userName} = order;
 
     useEffect(() => {
-        fetch('https://young-citadel-45878.herokuapp.com/create-payment-intent', {
+        fetch('https://car-parts-manufacturer-server.onrender.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -80,7 +80,7 @@ const CheckoutForm = ({ order }) => {
                 status: "Pending"
             }
             //
-            fetch(`https://young-citadel-45878.herokuapp.com/orders/${_id}`, {
+            fetch(`https://car-parts-manufacturer-server.onrender.com/orders/${_id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json',

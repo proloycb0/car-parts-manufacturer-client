@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import UserRow from './UserRow';
 
 const MakeAdmin = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://young-citadel-45878.herokuapp.com/users',{
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://car-parts-manufacturer-server.onrender.com/users',{
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`

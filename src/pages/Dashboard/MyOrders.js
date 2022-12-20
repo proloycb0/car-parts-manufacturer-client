@@ -11,7 +11,7 @@ const MyOrders = () => {
     const [user] = useAuthState(auth);
     const [cancelOrder, setCancelOrder] = useState(null)
     const navigate = useNavigate();
-    const { data: orders, isLoading, refetch } = useQuery(["orders", user, navigate], () => fetch(`https://young-citadel-45878.herokuapp.com/order?userEmail=${user.email}`, {
+    const { data: orders, isLoading, refetch } = useQuery(["orders", user, navigate], () => fetch(`https://car-parts-manufacturer-server.onrender.com/order?userEmail=${user.email}`, {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`

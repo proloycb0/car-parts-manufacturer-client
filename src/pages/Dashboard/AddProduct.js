@@ -30,7 +30,7 @@ const AddProduct = () => {
                     }
 
                     // send to your database
-                    fetch('https://young-citadel-45878.herokuapp.com/parts', {
+                    fetch('https://car-parts-manufacturer-server.onrender.com/parts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

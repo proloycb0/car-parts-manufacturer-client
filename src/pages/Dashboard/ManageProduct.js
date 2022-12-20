@@ -5,7 +5,7 @@ import ProductDeleteConfirm from './ProductDeleteConfirm';
 
 const ManageProduct = () => {
     const [deleteProduct, setDeleteProduct] = useState(null);
-    const { data: products, isLoading, refetch } = useQuery('products', () => fetch(`https://young-citadel-45878.herokuapp.com/parts`, {
+    const { data: products, isLoading, refetch } = useQuery('products', () => fetch(`https://car-parts-manufacturer-server.onrender.com/parts`, {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`

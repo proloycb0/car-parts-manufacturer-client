@@ -6,7 +6,7 @@ import Loading from '../Shared/Loading';
 import Review from './Review';
 
 const Reviews = () => {
-    const { data: reviews, isLoading } = useQuery('reviews', () => fetch('https://young-citadel-45878.herokuapp.com/review', {
+    const { data: reviews, isLoading } = useQuery('reviews', () => fetch('https://car-parts-manufacturer-server.onrender.com/review', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',

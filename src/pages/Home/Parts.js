@@ -6,7 +6,7 @@ import Loading from '../Shared/Loading';
 import Part from './Part';
 
 const Parts = () => {
-    const { data: products, isLoading } = useQuery("parts", () => fetch('https://young-citadel-45878.herokuapp.com/parts')
+    const { data: products, isLoading } = useQuery("parts", () => fetch('https://car-parts-manufacturer-server.onrender.com/parts')
         .then(res => res.json())
     );
 

@@ -10,7 +10,7 @@ const stripePromise = loadStripe('pk_test_51L0eRwKEErB9NVHS5sUdXuwmf4krkFKDHJ9qn
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `https://young-citadel-45878.herokuapp.com/orders/${id}`;
+    const url = `https://car-parts-manufacturer-server.onrender.com/orders/${id}`;
 
     const { data: order, isLoading } = useQuery('order', () => fetch(url, {
         method: 'GET',

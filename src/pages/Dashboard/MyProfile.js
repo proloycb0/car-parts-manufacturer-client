@@ -8,7 +8,7 @@ import Loading from '../Shared/Loading';
 const MyProfile = () => {
     const [user] = useAuthState(auth);
     const [updateProfile, updating] = useUpdateProfile(auth);
-    const { data: users, isLoading, refetch } = useQuery(['users', user], () => fetch(`https://young-citadel-45878.herokuapp.com/user?email=${user?.email}`, {
+    const { data: users, isLoading, refetch } = useQuery(['users', user], () => fetch(`https://car-parts-manufacturer-server.onrender.com/user?email=${user?.email}`, {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -57,7 +57,7 @@ const MyProfile = () => {
             address: address
         }
 
-        fetch(`https://young-citadel-45878.herokuapp.com/user/${user?.email}`, {
+        fetch(`https://car-parts-manufacturer-server.onrender.com/user/${user?.email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

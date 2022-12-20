@@ -5,7 +5,7 @@ const UserRow = ({ index, user, refetch }) => {
     const { email, role } = user;
 
     const makeAdmin = () => {
-        fetch(`https://young-citadel-45878.herokuapp.com/user/admin/${email}`, {
+        fetch(`https://car-parts-manufacturer-server.onrender.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -26,7 +26,7 @@ const UserRow = ({ index, user, refetch }) => {
     }
 
     const handleDelete = () => {
-        fetch(`https://young-citadel-45878.herokuapp.com/user/${email}`, {
+        fetch(`https://car-parts-manufacturer-server.onrender.com/user/${email}`, {
             method: 'DELETE',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

@@ -16,7 +16,7 @@ const Purchase = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`https://young-citadel-45878.herokuapp.com/parts/${id}`)
+        fetch(`https://car-parts-manufacturer-server.onrender.com/parts/${id}`)
             .then(res => res.json())
             .then(data => {
                 setMinOrderQuantity(parseInt(data.orderQuantity));
