@@ -1,6 +1,6 @@
 # CarnoCar Parts Manufacturer
 
-Live site link: [https://carnocar-parts-manufacture.web.app/](https://carnocar-parts-manufacture.web.app/) 
+Live site link: [https://carnocar-parts-manufacture.netlify.app/](https://carnocar-parts-manufacture.netlify.app/) 
 
 ## Admin login: bishwjit@gmail.com  and password: 123456
 ## Features
